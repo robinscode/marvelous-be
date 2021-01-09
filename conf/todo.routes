@@ -1,0 +1,9 @@
+# Routes for Todos
+# ~~~~~
+
+GET         /               ca.h8tch.robin.todo.controllers.TodoController.list(page: Integer ?= null, size: Integer ?= null, done: Boolean ?= false)
+PUT         /:id            ca.h8tch.robin.todo.controllers.TodoController.toggle(id: java.util.UUID)
+POST        /               ca.h8tch.robin.todo.controllers.TodoController.add(request: Request)
+DELETE      /               ca.h8tch.robin.todo.controllers.TodoController.clearAll
+OPTIONS     /               ca.h8tch.robin.todo.controllers.TodoController.options()
+OPTIONS     /:id            ca.h8tch.robin.todo.controllers.TodoController.optionsWithId(id: java.util.UUID)
